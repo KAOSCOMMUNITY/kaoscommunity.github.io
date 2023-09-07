@@ -1,0 +1,1167 @@
+<!-- CREATED BY KAOS COMMUNITY -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Kaos COMMUNITY, Comunidad Kaos, Informática, Seguridad Informática, Programación, Conocimiento">
+    <meta name="author" content="KAOS COMMUNITY" />
+    <meta name="description" content="We are the largest knowledge community made up of members from all over the world.
+    Our main objective is to provide, inform, debate and innovate knowledge to anyone who seeks it, such as giving a job opportunity./>
+    <meta property="og:locale" content="en_EN" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="">
+    <meta property="og:url" content="https://kaoscommunity.github.io/" />
+    <meta property="og:title" content="KAOS COMMUNITY" />
+    <meta property="og:image" content="https://i.ibb.co/KLr54gC/ICON.png" />
+    <meta property="og:site_name" content="KAOS COMMUNITY" />
+    <meta property="og:description" content="We are the largest knowledge community made up of members from all over the world.
+    Our main objective is to provide, inform, debate and innovate knowledge to anyone who seeks it, such as giving a job opportunity." />
+    <title>KAOS COMMUNITY</title>
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/KLr54gC/ICON.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/6yd4PqC/ICON32-X32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://i.ibb.co/YN8pCw1/ICON192-X192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://i.ibb.co/x1DFkKc/ICON512-X512.png">
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"/>
+      
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"/>
+      
+  </head>
+
+<style>
+
+/* CREATED BY KAOS COMMUNITY */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* boton */
+.fa{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    bottom:700px;
+    right:40px;
+    height:50px;
+    width:50px;
+    background:rgb(11, 12, 16);
+    border-radius:50%;
+    color:#fff;
+    box-shadow:0px 0px 10px rgba(0,0,0,.2);
+    background-position:center;
+    background-repeat:no-repeat;
+    visibility:hidden;
+    opacity:0;
+    transition:.3s;
+    z-index:10000;
+
+    
+}
+.fa.active{
+    visibility:visible;
+    opacity:1;
+    bottom:40px;
+}
+
+.sec1 {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    border-bottom: .1rem solid #000;
+
+}
+
+.menuBar {
+    position: fixed;
+    top: 0;
+    left: 120%;
+    height: 100%;
+    width: 80%;
+
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5rem rgba(255, 255, 255, .0);
+    transition: .5s;
+}
+
+.menuBar.active {
+    left: 20%;
+}
+
+.menuBar ul {
+    list-style-type: none;
+}
+
+.menuBar ul li {
+    margin: 5rem 0;
+}
+
+.menuBar ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1.5rem;
+    transition: .5s;
+    background: #0B0C10;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+
+}
+
+
+.menuBar ul li a:hover {
+    color: #66FCF1;
+    background: #0B0C10;
+}
+
+.navBar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .5);
+    z-index: 2000;
+}
+
+.sec1__menuIcon {
+    display: none;
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    background: url('https://i.ibb.co/d5y5c8Y/main.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.sec1__menuIcon.active {
+    background: url('https://i.ibb.co/x2vmf5q/close.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.navBar .logo h1 {
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    font-family: Elianto Regular;
+}
+
+.navBar .navBar__menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navBar .navBar__menu ul li {
+    margin: 1.5rem;
+}
+
+.navBar .navBar__menu ul li a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    color: #fff;
+    transition: .3s;
+}
+
+.navBar .navBar__menu ul li a:before {
+    background: rgb(102, 252, 241);
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: .4rem;
+    width: 0%;
+    border-radius: 1rem;
+    color: #66FCF1;
+    transition: .4s;
+}
+
+.navBar .navBar__menu ul li a:hover:before {
+    width: 100%;
+    color: #66FCF1;
+}
+
+.navBar .navBar__menu ul li a:hover {
+    color: rgb(102, 252, 241);
+}
+
+.sec1__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+
+    width: 100%;
+    padding: 0 5rem;
+}
+
+.sec1__content .sec1__contentDetail h1 {
+    font-weight: 900;
+    font-size: 5rem;
+    text-transform: capitalize;
+    transform: translateY(7rem);
+}
+
+.sec1__contentHider {
+    overflow: hidden;
+    color:#fff;
+}
+
+.sec1__content .sec1__contentDetail h1 span {
+    color: rgb(102, 252, 241);
+}
+
+.sec1__content .sec1__contentDetail {
+    margin-bottom: 3rem;
+}
+
+.sec1__content a {
+    background: rgb(31, 40, 51);
+    color: #66FCF1;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    border-color:#66FCF1;
+    transition: .4s;
+}
+
+.sec1__content a:hover {
+    color: rgb(102, 252, 241);
+    background: rgb(31, 40, 51);
+}
+
+
+.sec2 {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: .2rem solid rgb(11, 12, 16);
+    background-color:#0B0C10;
+    color:#fff;
+}
+
+.sec2__heading {
+    overflow: hidden;
+}
+
+.sec2__heading h2 {
+    position: relative;
+    font-size: 5rem;
+    color: #66FCF1;
+    text-transform: capitalize;
+}
+
+
+
+.sec2__heading h2:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: .2rem;
+    width: 100%;
+    background-color: rgb(102, 252, 241);
+}
+
+.sec2__container {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+
+    padding: 0 5rem;
+}
+
+.sec2__aboutme1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: .5;
+}
+
+.sec2__aboutme1Img {
+    position: relative;
+    width: 10rem;
+    overflow: hidden;
+    border: .3rem solid rgb(255, 255, 255);
+    padding: .3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.sec2__aboutme1Img:hover {
+    transform: scale(1.1);
+}
+
+.sec2__aboutme1Img img {
+    width: 100%;
+    object-fit: cover;
+    background: linear-gradient(rgb(0, 0,0), rgb(0, 0, 0));
+    border-radius: 50%;
+}
+
+.sec2__aboutme1 h2 {
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+    padding-top: 2rem;
+
+}
+
+.sec2__aboutme1 h2:before {
+    position: absolute;
+    height: .2rem;
+    width: 60%;
+    bottom: 0;
+    right: 25%;
+    content: "";
+    background: #000;
+}
+
+.sec2__aboutme1Social ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+    list-style-type: none;
+}
+
+.sec2__aboutme1Social ul li {
+    margin: 0 2rem;
+    transition: .3s;
+
+}
+
+.sec2__aboutme1Social ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+    transition: .3s;
+}
+
+.sec2__aboutme1Social ul li:hover {
+    transform: translateY(-.3rem);
+}
+
+.sec2__aboutme1Social ul li:nth-child(1) a:hover {
+    color: rgb(102, 252, 241);
+}
+
+.sec2__aboutme1Social ul li:nth-child(2) a:hover {
+    color: rgb(102, 252, 241);
+}
+
+.sec2__aboutme1Social ul li:nth-child(3) a:hover {
+    color: rgb(102, 252, 241);
+
+}
+
+.sec2__aboutme2 {
+    position: relative;
+    flex: .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec2__aboutme2 p {
+    font-size: 1.5rem;
+}
+
+.sec3 {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    background: #0B0C10;
+    /*background: radial-gradient(#000, #000);*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sec3 h1 {
+    position: relative;
+    color: #66FCF1;
+    font-size: 5rem;
+    border-bottom: .2rem solid rgb(102, 252, 241);
+}
+
+.sec3__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.sec3__box .sec3__percent svg {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    z-index: 1000;
+}
+
+.sec3__box .sec3__percent svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #66FCF1;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(.5rem, .5rem);
+}
+
+.sec3__percent svg circle:nth-child(2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.sec3__card:nth-child(1) .sec3__box .sec3__percent svg circle:nth-child(2) {
+    stroke: #fff;
+    stroke-dashoffset: calc(440 - (440*90)/100);
+}
+
+.sec3__card:nth-child(2) .sec3__box .sec3__percent svg circle:nth-child(2) {
+    stroke: #fff;
+    stroke-dashoffset: calc(440 - (440*70)/100);
+}
+
+.sec3__card:nth-child(3) .sec3__box .sec3__percent svg circle:nth-child(2) {
+    stroke: #fff;
+    stroke-dashoffset: calc(440 - (440*55)/100);
+}
+
+.sec3__card {
+    position: relative;
+    background: #000;
+    padding: 5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .9);
+    margin: 2rem;
+}
+
+.sec3__card .sec3__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sec3__card:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    background: rgba(225, 225, 225, .05);
+    z-index: 1;
+    transition: .3s;
+}
+
+.sec3__card:hover:before {
+    transform: translateX(50%);
+    width: 90%;
+}
+
+.sec3__percent {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 2rem #000;
+}
+
+.sec3__percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.number h2 {
+    color: rgba(255, 255, 255, .5);
+    font-size: 4rem;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.number h2 span {
+    font-size: 2rem;
+    transition: .3s;
+}
+
+.sec3__card:hover .number h2 span {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.sec3__text {
+    color: rgba(255, 255, 255, .0);
+    margin-top: 2.5rem;
+    transition: .3s;
+}
+
+.sec3__card:hover .sec3__text {
+    color: #fff;
+}
+
+.sec3__card:hover .number h2 {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+.sec3__card:hover {
+    transform: translateY(-1rem);
+}
+
+.sec4 {
+    overflow: hidden;
+    position: relative;
+    min-height: 70vh;
+    width: 100%;
+    background: #000;
+    /*background: radial-gradient(#000, #000);*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec4__container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.sec4__box1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    flex: .5;
+}
+
+.sec4__content1 {
+    margin-bottom: 1rem;
+}
+
+.sec4__content1 h2 {
+    color: #fff;
+    font-size: 3rem;
+    border-bottom: .2rem solid #66FCF1;
+    width: fit-content;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+}
+
+
+.sec4__content1 h2 span {
+    color: #66FCF1;
+}
+
+.sec4__content1 p {
+    color: #fff;
+}
+
+.sec4__content2Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.sec4__content2Icon h2 {
+    margin-left: .5rem;
+}
+
+.sec4__content2 {
+    margin: .5rem 0;
+}
+
+.sec4__content3 ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+.sec4__content3 ul li {
+    margin: 0 1.5rem 0 0;
+}
+
+.sec4__content3 ul li a {
+    color: #66FCF1;
+    font-size: 2rem;
+    border: .2rem solid #66FCF1;
+    padding: .4rem;
+    border-radius: 20%;
+    transition: .3s;
+}
+
+.sec4__content3 ul li a:hover {
+    color: rgba(102, 252, 241 .0);
+}
+
+.sec4__box2 h2 {
+    color: #66FCF1;
+    font-size: 3rem;
+    border-bottom: .2rem solid #66FCF1;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+}
+
+.sec4__links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.sec4__links ul li {
+    margin: .5rem 0;
+}
+
+.sec4__links ul li a {
+    color: rgba(255, 255, 255, .9);
+    transition: .3s;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.sec4__links ul li a:hover {
+    color: #66FCF1;
+}
+
+.sec4__box3 h2 {
+    color: #66FCF1;
+    font-size: 3rem;
+    border-bottom: .2rem solid #66FCF1;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+    width: fit-content;
+}
+
+.sec4__box3 form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sec4__box3 form input {
+    border: none;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+    padding: .5rem 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    border-radius: 3rem;
+}
+
+.sec4__box3 form input::placeholder {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.sec4__box3 form button {
+    border: none;
+    background: none;
+    outline: none;
+    padding: .5rem 2rem;
+    color: #000;
+    background: #fff;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 3rem;
+
+}
+
+.sec4__box3 form button:hover {
+    color: #66FCF1;
+    background: #1F2833;
+}
+
+/* media query start here  */
+@media(max-width:360px) {
+    .sec1__menuIcon {
+        display: inline-block;
+    }
+
+    .sec1__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 10rem;
+
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .navBar__menu {
+        display: none;
+    }
+
+    .sec1__content .sec1__contentDetail h1 {
+        font-weight: 900;
+        font-size: 3.5rem;
+        text-transform: capitalize;
+        transform: translateY(7rem);
+    }
+
+    .sec1__imgBx {
+        position: relative;
+        width: 30rem;
+
+        margin-top: 5rem;
+    }
+
+    .sec2__container {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 0 2rem;
+        flex-direction: column;
+    }
+
+    .sec2__heading h2 {
+        position: relative;
+        font-size: 2.5rem;
+        color: #66FCF1;
+        text-transform: capitalize;
+    }
+
+    .sec2__aboutme1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex: .5;
+        margin: 5rem 0;
+    }
+
+    .sec2__aboutme2 {
+        position: relative;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 3rem 0;
+    }
+
+    .sec4__box1 {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-direction: column;
+        flex: .5;
+        margin: 2.5rem 0 4rem 0;
+    }
+
+    .sec4__box2 {
+        margin: 2.5rem 0;
+    }
+}
+
+</style>
+
+  <body>
+
+  <i class="fa fa-arrow-up" aria-hidden="true" onclick = "scrollToTop();"></i>
+
+    <section class="sec1" id="section1">
+
+      <div class="menuBar">
+        <ul>
+          <li><a href="#section1">Home</a></li>
+          <li><a href="#section2">About Us</a></li>
+          <li><a href="#section3">Members</a></li>
+          <li><a href="#section4">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="navBar">
+        <div class="logo" alt="logo">
+          <h1>KAOS COMMUNITY</h1>
+        </div>
+
+        <div class="navBar__menu">
+          <ul>
+            <li>
+              <a href="#section1">Home</a>
+            </li>
+            <li>
+              <a href="#section2">About Us</a>
+            </li>
+            <li>
+              <a href="#section3">Members</a>
+            </li>
+            <li>
+              <a href="#section4">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sec1__menuIcon"></div>
+    </div>
+      
+      <div class="sec1__container">
+        <div class="sec1__content">
+          <div class="sec1__contentDetail">
+            <div class="sec1__contentHider">
+              <h1>WELCOME,</h1>
+            </div>
+            <div class="sec1__contentHider">
+              <h1>WE ARE<span> KAOS</span></h1>
+            </div>
+            <div class="sec1__contentHider">
+              <h1>COMMUNITY</h1>
+            </div>
+          </div>
+
+          <a href="https://www.t.me/kaoscommunity">JOIN <i class="fab fa-telegram"></i></a>
+        </div>
+        
+        <div class="sec1__imgContainer">
+          <div class="sec1__imgBx">
+            <img src="https://i.ibb.co/vsFxgxr/image.png"  alt="image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec2" id="section2">
+      <div class="sec2__heading">
+        <h2>About Us</h2>
+      </div>
+      <div class="sec2__container">
+        <div class="sec2__aboutme1" data-aos="fade-up" data-aos-offset="-90">
+          <div class="sec2__aboutme1Img">
+            <img src="https://i.ibb.co/kQBjg0B/KAOS-COMMUNITY-PROFILE.jpg" alt="profile" />
+          </div>
+          <h2>KAOS COMMUNITY</h2>
+          <div class="sec2__aboutme1Social">
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/kaoscommunity"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://github.com/kaoscommunity"><i class="fab fa-google"></i></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61550885972148"><i class="fab fa-facebook"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sec2__aboutme2" data-aos="fade-up" data-aos-delay="1000">
+          <p>
+            We are the largest knowledge community made up of members from all over the world.<br/>Our main objective is to provide, inform, debate and innovate knowledge to anyone who seeks it, such as giving a job opportunity.<br />
+            As part of the KAOS COMMUNITY, share knowledge and interact daily with other members of our community.
+            
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="sec3" id="section3">
+      <h1>Members</h1>
+      <div class="sec3__container">
+      <div class="sec3__box1">
+          <div class="sec3__content1"">
+           <ul id="ul-square">
+           
+      <li data-aos="fade-left"
+style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white">FULL STACKS DEVELOPER</h2></li>
+      
+      <li data-aos="fade-left"
+style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">VIDEOGAME DEVELOPER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">FRONTEND DEVELOPER</h2></li>
+      
+      <li data-aos="fade-left"
+style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white" >BACKEND DEVELOPER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white" >DESKTOP DEVELOPER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white">MOBILE DEVELOPER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">SYSADMIN</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">HACKER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">PENTESTER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">RESEARCHER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">WEB DESIGNER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">GRAPHIC DESIGNER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 style="color:white"align="left">COMMUNITY MANAGER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 style="color:white"align="left">TYPOGRAPHER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 style="color:white"align="left">VIDEOMAKER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">BEATMAKER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">VFX ARTIST</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">FOLEY ARTIST</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">RENDERER</h2></li>
+      
+      <li data-aos="fade-left"
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white">TECHNICAL</h2></li>
+      
+       </div>   
+        </div>
+        </div>
+      </ul>
+    </section>
+
+    <section class="sec4" id="section4">
+      <div class="sec4__container">
+        <div class="sec4__box1">
+          <div class="sec4__content1" data-aos="fade-right">
+            <h2> <span>KAOS</span> COMMUNITY</h2>
+            <p>
+              Follow us on all our social networks.<br />
+              Join KAOS COMMUNITY, join knowledge.
+            </p>
+          </div>
+          <div
+            class="sec4__content2"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <div class="sec4__content2Icon">
+              <i class="fas fa-phone-alt"></i>
+              <h2>+591 63910299</h2>
+            </div>
+            <div class="sec4__content2Icon">
+              <i class="fas fa-envelope"></i>
+              <h2>kaoscommunitybusiness@gmail.com</h2>
+            </div>
+          </div>
+          <div
+            class="sec4__content3"
+            data-aos="fade-right"
+            data-aos-delay="500"
+          >
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61550885972148"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/kaoscommunity"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://chat.whatsapp.com/IkFenFQiHLQDxtsDJKxJm8"><i class="fab fa-whatsapp"></i></a>
+              </li>
+              <li>
+                <a href="https://www.t.me/kaoscommunity"><i class="fab fa-telegram"></i></a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@kaoscommunity"><i class="fab fa-tiktok"></i></a>
+              </li>
+              <li>
+                <a href="https://www.twitter.com/kaoscommunity"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCIDg4dTWuCI_2twp2qJ2BlA"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sec4__box2" data-aos="fade-in" data-aos-delay="500">
+          <h2>Quick links</h2>
+          <div class="sec4__links">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#section2">About Us</a></li>
+              <li><a href="#section3">Members</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="sec4__box3">
+          <h2>Contact Us</h2>
+
+          <form action="mailto:kaoscommunitybusiness@gmail.com" method="post" enctype="text/plain">
+            <input
+              data-aos="fade-left"
+              data-aos-delay="500"
+              class="sec4__email"
+              type="email"
+              placeholder="Enter your Email"
+            />
+            <input 
+              class="sec4__message"
+              data-aos="fade-left"
+              data-aos-delay="1000"
+              type="text"
+              placeholder="Enter your message"
+            />
+            <button type="submit" value="send">Send</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+      tl.from(".navBar", { y: "-10rem", duration: 1 });
+      tl.from(".navBar .navBar__menu ul li", {
+        y: "-2rem",
+        opacity: 0,
+        duration: 1,
+        stagger: 0.25,
+      });
+      tl.to(
+        ".sec1__content .sec1__contentDetail h1",
+        { y: "0rem", duration: 1, stagger: 0.25 },
+        "=-1"
+      );
+    </script>
+
+    <!-- our AOs will occur here -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        offset:0,
+      });
+    </script>
+
+    <script>
+      var sec1__menuIcon = document.querySelector(".sec1__menuIcon");
+      var menuBar = document.querySelector(".menuBar");
+      sec1__menuIcon.addEventListener("click", function () {
+        sec1__menuIcon.classList.toggle("active");
+        menuBar.classList.toggle("active");
+      });
+    </script>
+
+    <script type = "text/javascript">
+        window.addEventListener('scroll',function(){
+            var scroll = document.querySelector('.fa');
+            scroll.classList.toggle("active",window.scrollY>500)
+        })
+        function scrollToTop(){
+            window.scrollTo({
+                top:0,
+                behavior:'smooth'
+            })
+        }
+    </script>
+
+  </body>
+</html>
