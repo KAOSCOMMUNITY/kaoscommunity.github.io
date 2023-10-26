@@ -7,9 +7,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="KAOS COMMUNITY, COMUNIDAD KAOS, CONOCIMINENTO">
+    <meta name="keywords" content="KAOS COMMUNITY, COMUNIDAD KAOS, CONOCIMIENTO">
     <meta name="author" content="KAOS COMMUNITY" />
-    <meta name="description" content="We are the largest knowledge community made up of members from all over the world. Our main objective is to provide, inform, debate and innovate knowledge to anyone who seeks it."/>
+    <meta name="description" content="We are the largest knowledge community made up of members from all over the world.
+    Our main objective is to provide, inform, debate and innovate knowledge to anyone who seeks it."/>
     <meta property="og:locale" content="en_EN" />
     <meta property="og:type" content="website" />
     <meta property="fb:app_id" content="">
@@ -17,7 +18,8 @@
     <meta property="og:title" content="KAOS COMMUNITY" />
     <meta property="og:image" content="https://i.ibb.co/KLr54gC/ICON.png" />
     <meta property="og:site_name" content="KAOS COMMUNITY" />
-    <meta property="og:description" content="We are the largest knowledge community made up of members from all over the world. Our main objective is to provide, inform, debate and innovate knowledge to anyone who seeks it."/>
+    <meta property="og:description" content="We are the largest knowledge community made up of members from all over the world.
+    Our main objective is to provide, inform, debate and innovate knowledge to anyone who seeks it."/>
     
     <title>KAOS COMMUNITY</title>
 
@@ -60,7 +62,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* buttom */
+/* bottom */
 .fa{
     display:flex;
     justify-content:center;
@@ -72,7 +74,7 @@ html {
     width:50px;
     background:rgb(11, 12, 16);
     border-radius:50%;
-    color:#66FCF1;
+    color:#fff;
     box-shadow:0px 0px 10px rgba(0,0,0,.2);
     background-position:center;
     background-repeat:no-repeat;
@@ -108,6 +110,7 @@ html {
     left: 120%;
     height: 100%;
     width: 80%;
+
     z-index: 2000;
     display: flex;
     align-items: center;
@@ -432,6 +435,7 @@ html {
     overflow: hidden;
     width: 100%;
     background: #0B0C10;
+    /*background: radial-gradient(#000, #000);*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -607,15 +611,6 @@ html {
     flex-wrap: wrap;
 }
 
-.sec4__box h2 {
-    color: #66FCF1;
-    font-size: 3rem;
-    border-bottom: .2rem solid #66FCF1;
-    padding-bottom: .5rem;
-    margin-bottom: .5rem;
-    width: fit-content;
-}
-
 .sec4__box1 {
     display: flex;
     justify-content: space-evenly;
@@ -715,6 +710,56 @@ html {
 
 .sec4__links ul li a:hover {
     color: #66FCF1;
+}
+
+.sec4__box3 h2 {
+    color: #66FCF1;
+    font-size: 3rem;
+    border-bottom: .2rem solid #66FCF1;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+    width: fit-content;
+}
+
+.sec4__box3 form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sec4__box3 form input {
+    border: none;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+    padding: .5rem 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    border-radius: 3rem;
+}
+
+.sec4__box3 form input::placeholder {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.sec4__box3 form button {
+    border: none;
+    background: none;
+    outline: none;
+    padding: .5rem 2rem;
+    color: #000;
+    background: #fff;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 3rem;
+
+}
+
+.sec4__box3 form button:hover {
+    color: #66FCF1;
+    background: #1F2833;
 }
 
 /* media query start here  */
@@ -863,7 +908,7 @@ html {
         
         <div class="sec1__imgContainer">
           <div class="sec1__imgBx">
-            <img src="https://i.ibb.co/vsFxgxr/image.png"  alt="KAOS-COMMUNITY-IMAGE" />
+            <img src="https://i.ibb.co/vsFxgxr/image.png"  alt="image" />
           </div>
         </div>
       </div>
@@ -876,7 +921,7 @@ html {
       <div class="sec2__container">
         <div class="sec2__aboutme1" data-aos="fade-up" data-aos-offset="-90">
           <div class="sec2__aboutme1Img">
-            <img src="https://i.ibb.co/kQBjg0B/KAOS-COMMUNITY-PROFILE.jpg" alt="KAOS-COMMUNITY-PROFILE" />
+            <img src="https://i.ibb.co/kQBjg0B/KAOS-COMMUNITY-PROFILE.jpg" alt="profile" />
           </div>
           <h2>KAOS COMMUNITY</h2>
           <div class="sec2__aboutme1Social">
@@ -894,11 +939,8 @@ html {
           </div>
         </div>
         <div class="sec2__aboutme2" data-aos="fade-up" data-aos-delay="1000">
-          <p>
-            We are the largest knowledge community made up of members from all over the world.<br/>Our main objective is to provide, inform, debate and innovate knowledge to anyone who seeks it, such as giving a job opportunity.<br />
-            As part of the KAOS COMMUNITY, share knowledge and interact daily with other members of our community.
-            
-          </p>
+          <p>We are the largest knowledge community made up of members from all over the world.<br/>Our main objective is to provide, inform, debate and innovate knowledge to anyone who seeks it.<br />
+            As part of the KAOS COMMUNITY, share knowledge and interact daily with other members of our community.</p>
         </div>
       </div>
     </section>
@@ -965,7 +1007,7 @@ style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white" >BACKEND DEV
       style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">FOLEY ARTIST</h2></li>
       
       <li data-aos="fade-left"
-      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">RENDERER</h2></li>
+      style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white"align="left">MARKETER</h2></li>
       
       <li data-aos="fade-left"
       style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white">TECHNICAL</h2></li>
@@ -975,18 +1017,12 @@ style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white" >BACKEND DEV
         </div>
       </ul>
     </section>
-          
+
     <section class="sec4" id="section4">
       <div class="sec4__container">
-      
-        <div class="sec4__box">
-          <h2>Contact Us</h2></div>
-          
         <div class="sec4__box1">
           <div class="sec4__content1" data-aos="fade-right">
-          
             <h2> <span>KAOS</span> COMMUNITY</h2>
-            
             <p>
               Follow us on all our social networks.<br />
               Join KAOS COMMUNITY, join knowledge.
@@ -1046,9 +1082,26 @@ style="color:#66FCF1"><h2 data-aos="fade-right" style="color:white" >BACKEND DEV
             </ul>
           </div>
         </div>
-        
+        <div class="sec4__box3">
+          <h2>Contact Us</h2>
 
-         
+          <form action="mailto:kaoscommunitybusiness@gmail.com" method="post" enctype="text/plain">
+            <input
+              data-aos="fade-left"
+              data-aos-delay="500"
+              class="sec4__email"
+              type="email"
+              placeholder="Enter your Email"
+            />
+            <input 
+              class="sec4__message"
+              data-aos="fade-left"
+              data-aos-delay="1000"
+              type="text"
+              placeholder="Enter your message"
+            />
+            <button type="submit" value="send">Send</button>
+          </form>
 
         </div>
       </div>
