@@ -1,6 +1,6 @@
-#  Responsive Kaos Community Website
+# Responsive Kaos Community Website
 ## [Join in youtube](https://www.youtube.com/channel/UCIDg4dTWuCI_2twp2qJ2BlA)
-### ☕ Responsive Kaos Community Website
+### Responsive Kaos Community Website
 
 - Responsive Coffee Website Using HTML CSS & JavaScript
 - Smooth scrolling in each section.
